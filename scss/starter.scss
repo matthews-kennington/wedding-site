@@ -8,7 +8,7 @@ $enable-gradients: true;
 $enable-shadows:   true;
 
 // Color System
-$primary: $pantone-2597-cp;
+$primary: $pantone-2767-cp;
 
 $custom-colors: (
   "primary": $primary
@@ -59,6 +59,10 @@ $font-path-blooming-elegant-doodles-2:    "#{$font-path}blooming-elegant-doodles
   font-size: 50%;
 }
 
+.navbar.navbar-transparent {
+  @include gradient-y($primary, $navbar-transparent-bg);
+}
+
 // Style Bootstrap icons
 .bi {
   fill: currentColor;
@@ -66,6 +70,13 @@ $font-path-blooming-elegant-doodles-2:    "#{$font-path}blooming-elegant-doodles
 
 .pulse {
   animation-name: pulse;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.continue {
+  animation-name: continue;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -86,5 +97,17 @@ $font-path-blooming-elegant-doodles-2:    "#{$font-path}blooming-elegant-doodles
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes continue {
+  25% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY($spacer * 3) rotate(60deg);
+  }
+  75% {
+    transform: translateY(0) rotate(0deg);
   }
 }
