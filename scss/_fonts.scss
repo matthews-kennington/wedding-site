@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Blooming Elegant";
+  src: url("#{$font-path-blooming-elegant-regular}font.woff2") format("woff2"), url("#{$font-path-blooming-elegant-regular}font.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Blooming Elegant Sans";
+  font-weight: 400;
+  src: url("#{$font-path-blooming-elegant-sans-regular}font.woff2") format("woff2"), url("#{$font-path-blooming-elegant-sans-regular}font.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Blooming Elegant Sans";
+  font-weight: 700;
+  src: url("#{$font-path-blooming-elegant-sans-bold}font.woff2") format("woff2"), url("#{$font-path-blooming-elegant-sans-bold}font.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Blooming Elegant Doodles 1";
+  src: url("#{$font-path-blooming-elegant-doodles-1}font.woff2") format("woff2"), url("#{$font-path-blooming-elegant-doodles-1}font.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Blooming Elegant Doodles 2";
+  src: url("#{$font-path-blooming-elegant-doodles-2}font.woff2") format("woff2"), url("#{$font-path-blooming-elegant-doodles-2}font.woff") format("woff");
+}

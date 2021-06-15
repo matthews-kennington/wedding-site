@@ -1,21 +1,21 @@
 {
-  "name": "bootstrap-npm-starter",
+  "name": "wedding-site",
   "version": "1.4.0",
   "private": true,
   "description": "Demo project for building a Bootstrap powered site via npm.",
-  "author": "mdo",
+  "author": "Kristian Matthews",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/twbs/bootstrap-npm-starter.git"
+    "url": "git+https://github.com/matthews-kennington/wedding-site.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap-npm-starter/issues"
+    "url": "https://github.com/matthews-kennington/wedding-site/issues"
   },
-  "homepage": "https://github.com/twbs/bootstrap-npm-starter#readme",
+  "homepage": "https://github.com/matthews-kennington/wedding-site#readme",
   "scripts": {
     "build": "npm run css",
-    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
+    "css-compile": "sass --style compressed --source-map --embed-sources --no-error-css --load-path node_modules scss:assets/css/",
     "css-lint": "stylelint scss/",
     "css-prefix": "postcss --replace assets/css/starter.css --use autoprefixer --map",
     "css-purge": "purgecss --keyframes --css assets/css/starter.css --content index.html \"node_modules/bootstrap/js/dist/{util,modal}.js\" --output assets/css/",
@@ -34,21 +34,22 @@
     "template"
   ],
   "dependencies": {
-    "bootstrap": "^4.6.0",
-    "bootstrap-icons": "^1.4.0",
-    "jquery": "^3.6.0",
-    "popper.js": "^1.16.1"
+    "@epickris/bootstrap-kit": "^1.0.2",
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.1",
+    "bootstrap-icons": "^1.5.0",
+    "pantone-css": "^0.1.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "node-sass": "^5.0.0",
+    "autoprefixer": "^10.2.6",
     "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.10",
+    "postcss": "^8.3.0",
     "postcss-cli": "^8.3.1",
-    "purgecss": "^4.0.2",
+    "purgecss": "^4.0.3",
+    "sass": "^1.34.0",
     "serve": "^11.3.2",
-    "stylelint": "^13.12.0",
-    "stylelint-config-twbs-bootstrap": "^2.1.0"
+    "stylelint": "^9.3.0",
+    "stylelint-config-twbs-bootstrap": "^0.5.0"
   }
 }

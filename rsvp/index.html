@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/starter.css">
+    <title>RSVP - Matthews-Kennington Wedding</title>
+  </head>
+  <body>
+    <script type="module" src="../assets/js/starter.js"></script>
+    <script src="https://unpkg.com/tripetto-runner-foundation"></script>
+    <script src="https://unpkg.com/tripetto-runner-autoscroll"></script>
+    <script src="https://unpkg.com/tripetto-services"></script>
+    <script>
+      var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiaE5WcTErcUxzNXByWlNsQ1VkU2NwZHArSThHRXpRU0lSMDBiU3U2VHNZdz0iLCJkZWZpbml0aW9uIjoiWUoxYVgvU2pnSXRVMThkdTNSUUV6Z3FnVGFscnFWbnAvR1RtbENtZTBlZz0iLCJ0eXBlIjoiY29sbGVjdCJ9.Hgml6cL8JXNy2qbDHHe3QeYrj3hPj7wVs9kNiRkpNWQ" });
+
+      TripettoAutoscroll.run({
+          element: document.body, /* Or supply your own element here */
+          definition: tripetto.definition,
+          styles: tripetto.styles,
+          l10n: tripetto.l10n,
+          locale: tripetto.locale,
+          translations: tripetto.translations,
+          attachments: tripetto.attachments,
+          onSubmit: tripetto.onSubmit,
+          snapshot: tripetto.snapshot,
+          onPause: tripetto.onPause,
+          persistent: true
+      });
+    </script>
+  </body>
+</html>
