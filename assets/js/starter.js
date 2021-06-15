@@ -17,7 +17,7 @@ import "../../node_modules/bootstrap/js/dist/dom/selector-engine.js";
 import "../../node_modules/bootstrap/js/dist/base-component.js";
 
 // Then your specific components
-// import "../../node_modules/bootstrap/js/dist/modal.js";
+import "../../node_modules/bootstrap/js/dist/scrollspy.js";
 
 var heroVideo = document.getElementById("hero-video");
 
