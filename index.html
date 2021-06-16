@@ -361,8 +361,24 @@
             data.routes[0].polyline
           ], { animate: true });
         });
+      });
 
+      collapsibleCar.addEventListener('hide.bs.collapse', function () {
         map.removeOverlays(map.overlays);
+
+        map.showItems([ places.crownePlaza.annotation ], { animate: true });
+      });
+
+      collapsibleTrain.addEventListener('hide.bs.collapse', function () {
+        map.removeOverlays(map.overlays);
+
+        map.showItems([ places.crownePlaza.annotation ], { animate: true });
+      });
+
+      collapsibleAir.addEventListener('hide.bs.collapse', function () {
+        map.removeOverlays(map.overlays);
+
+        map.showItems([ places.crownePlaza.annotation ], { animate: true });
       });
     </script>
   </body>
