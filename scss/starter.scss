@@ -59,6 +59,22 @@ $font-path-blooming-elegant-doodles-2:    "#{$font-path}blooming-elegant-doodles
   font-size: 50%;
 }
 
+.text-shadow {
+  text-shadow: 0 .5rem 1rem rgba($black, .15);
+}
+
+.text-shadow-sm {
+  text-shadow: 0 .125rem .25rem rgba($black, .075);
+}
+
+.text-shadow-primary {
+  text-shadow: 0 .5rem 1rem rgba($primary, .6);
+}
+
+.text-shadow-sm-primary {
+  text-shadow: 0 .125rem .25rem rgba($primary, .3);
+}
+
 .navbar.navbar-transparent {
   @include gradient-y($primary, $navbar-transparent-bg);
 }
