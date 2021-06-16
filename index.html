@@ -217,25 +217,25 @@
       };
 
       geocoder.lookup("Crowne Plaza, Leeds", function (error, data) {
-        places.crownePlaza = data.places[0];
+        places.crownePlaza = data.results[0];
 
         checkPlaces();
       }, { limitToCountries: "GB" });
 
       geocoder.lookup("Leeds Bus Station", function (error, data) {
-        places.busStation = data.places[0];
+        places.busStation = data.results[0];
 
         checkPlaces();
       }, { limitToCountries: "GB" });
 
       geocoder.lookup("Leeds Station", function (error, data) {
-        places.trainStation = data.places[0];
+        places.trainStation = data.results[0];
 
         checkPlaces();
       }, { limitToCountries: "GB" });
 
       geocoder.lookup("LBA Airport", function (error, data) {
-        places.airport = data.places[0];
+        places.airport = data.results[0];
 
         checkPlaces();
       }, { limitToCountries: "GB" });
