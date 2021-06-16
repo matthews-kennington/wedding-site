@@ -249,7 +249,7 @@
 
         var annotations = {};
         for (key in places) {
-          annotations[key] = mapkit.Annotation(places[key].coordinate, function (coordinate, options) {
+          annotations[key] = new mapkit.Annotation(places[key].coordinate, function (coordinate, options) {
             var div = document.createElement("div");
             div.className = "popover";
             div.textContent = options.title;
