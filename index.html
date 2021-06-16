@@ -43,12 +43,12 @@
       </div>
     </div>
 
-    <div id="how-we-met" class="block block-fill-height text-center">
+    <div id="how-we-met" class="block block-fill-height text-center px-0">
       <div class="block-xs-middle">
         <div class="block-foreground">
           <div class="container-fluid">
             <h2 class="block-title text-shadow-sm-primary">How We Met</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center align-items-center g-5">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center align-items-center g-4 pb-4" style="overflow-x: hidden;">
               <div class="col">
                 <div class="card shadow img-thumbnail text-primary text-start" style="transform: rotate(-4deg);">
                   <img src="assets/img/how-we-met-1.jpeg" class="card-img-top" alt="Kristian & Paul">
@@ -90,7 +90,7 @@
                 </div>
               </div>
             </div>
-            <p class="display-3 font-blooming-elegant mt-5">The rest is history.</p>
+            <p class="display-2 font-blooming-elegant mt-3">The rest is history.</p>
           </div>
         </div>
         <div class="block-background" style="background-image: url('assets/img/artwork-top.png'); background-repeat: no-repeat; background-position: center top; background-size: 100% auto;"></div>
@@ -122,13 +122,16 @@
         <div class="block-foreground w-100">
           <div class="container-fluid">
             <h2 class="block-title text-shadow-sm-primary">The Venue</h2>
+            <h3 class="display-2">Crowne Plaza, Leeds</h3>
             <h3>How to find the venue</h3>
-            <p class="lead">How to get to the Crowne Plaza, Leeds</p>
-            <div class="row">
-              <div class="col">
-                <div id="map" class="img-thumbnail w-100 h-100"></div>
+            <p>How to get to the Crowne Plaza, Leeds</p>
+            <div class="row align-items-center">
+              <div class="col-12 col-md-6 mb-3">
+                <div class="ratio ratio-4x3">
+                  <div id="map" class="img-thumbnail"></div>
+                </div>
               </div>
-              <div class="col">
+              <div class="col-12 col-md-6">
                 <div class="accordion" id="accordionFind">
                   <div class="accordion-item">
                     <h4 class="accordion-header" id="headingCar">
@@ -140,7 +143,10 @@
                       <div class="accordion-body">
                         <p>When you come to Leeds, head for the City Centre at Junction 3 from the M621. Crowne Plaza is located within easy access to the M621, M1 and M62 in the City Centre of Leeds on Wellington Street.</p>
                         <p>Crowne Plaza has 120 onsite parking spaces for you to use at £3.50 per vehicle or £10 per vehicle for 24 hours if you're staying overnight. If you wish to use the onsite parking facilities, you are required to enter and record your car registration number onto an online system. The Crowne Plaza team will be on hand to advise and assist you with this process on arrival.</p>
-                        <p>LS1 4AP/p>
+                        <dl class="row">
+                          <dt class="col-sm-3">Satellite Navigation:</dt>
+                          <dd class="col-sm-9">LS1 4AP</dd>
+                        </dl>
                       </div>
                     </div>
                   </div>
@@ -152,7 +158,7 @@
                     </h2>
                     <div id="collapseTrain" class="accordion-collapse collapse text-primary text-start" aria-labelledby="headingTrain" data-bs-parent="#accordionFind">
                       <div class="accordion-body">
-                        Exit the station by the City Square exit, turn left onto Wellington Street, the hotel is located 0.5 miles on the left hand side.
+                        <p>Exit the station by the City Square exit, turn left onto Wellington Street, the hotel is located 0.5 miles on the left hand side.</p>
                       </div>
                     </div>
                   </div>
@@ -164,7 +170,8 @@
                     </h2>
                     <div id="collapseAir" class="accordion-collapse collapse text-primary text-start" aria-labelledby="headingAir" data-bs-parent="#accordionFind">
                       <div class="accordion-body">
-                        Leeds Bradford LBA distance 12 miles or 20 minutes by taxi £22 fare.
+                        <p>Leeds Bradford LBA distance 12 miles or 20 minutes by taxi £22 fare.</p>
+                        <a class="btn btn-secondary" href="https://m.uber.com/ul?client_id=zA7oCmocQmnmo6_cPLyBds7MoGvAVVhZ&action=setPickup&pickup=my_location&dropoff[latitude]=53.796570&dropoff[longitude]=-1.557678&dropoff[nickname]=Crowne%20Plaza%2C%20Leeds&dropoff[formatted_address]=Crowne%20Plaza%20Leeds%0AWellington%20Street%0ALeeds%2C%20LS1%204DL%0AUnited%20Kingdom">Book an Uber</a>
                       </div>
                     </div>
                   </div>
@@ -180,9 +187,9 @@
     <script type="module" src="assets/js/starter.js"></script>
     <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
     <script>
-      var bsPrimary = getComputedStyle(document.documentElement).getPropertyValue("--bs-primary");
+      const bsPrimary = getComputedStyle(document.documentElement).getPropertyValue("--bs-primary");
 
-      var tokenId = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRWWTJZU0hUMk0ifQ.eyJpc3MiOiIzNFdVS1FCWFhIIiwiaWF0IjoxNjIzODQ4MzEwLCJleHAiOjE2NTUzMzc2MDAsIm9yaWdpbiI6IndlZGRpbmcubWF0dGhld3Mta2VubmluZ3Rvbi5jb20ifQ.WqERpuk9Ol5SZsEodrDas4FLRItWD9U1DWxIHwK14Beq3IYM6-p0JXDtoYX5xIth6xTGfW5YQBPvk4OmYR8Yjw";
+      const tokenId = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRWWTJZU0hUMk0ifQ.eyJpc3MiOiIzNFdVS1FCWFhIIiwiaWF0IjoxNjIzODQ4MzEwLCJleHAiOjE2NTUzMzc2MDAsIm9yaWdpbiI6IndlZGRpbmcubWF0dGhld3Mta2VubmluZ3Rvbi5jb20ifQ.WqERpuk9Ol5SZsEodrDas4FLRItWD9U1DWxIHwK14Beq3IYM6-p0JXDtoYX5xIth6xTGfW5YQBPvk4OmYR8Yjw";
 
       mapkit.init({
         authorizationCallback: function(done) {
@@ -190,9 +197,9 @@
         }
       });
 
-      var directions = new mapkit.Directions();
-      var geocoder = new mapkit.Geocoder();
-      var pointOfInterestFilter = new mapkit.PointOfInterestFilter.including([
+      const directions = new mapkit.Directions();
+      const geocoder = new mapkit.Geocoder();
+      const pointOfInterestFilter = new mapkit.PointOfInterestFilter.including([
         mapkit.PointOfInterestCategory.Hotel,
         mapkit.PointOfInterestCategory.Airport,
         mapkit.PointOfInterestCategory.ATM,
@@ -208,59 +215,89 @@
         mapkit.PointOfInterestCategory.PublicTransport,
         mapkit.PointOfInterestCategory.Restroom
       ]);
+      const style = new mapkit.Style({
+        lineWidth: 4,
+        strokeColor: bsPrimary,
+        strokeOpacity: .8
+      });
 
-      var lookups = {
-        crownePlaza: "Crowne Plaza, Leeds",
-        busStation: "Leeds Bus Station",
-        trainStation: "Leeds Station",
-        airport: "LBA Airport"
-      }
+      const places = {
+        crownePlaza: {
+          title: "Crowne Plaza",
+          glyphImage: "assets/img/mk.png",
+          lookup: "Crowne Plaza, Leeds"
+        },
+        busStation: {
+          title: "Bus Station",
+          lookup: "Leeds Bus Station"
+        },
+        trainStation: {
+          title: "Train Station",
+          lookup: "Leeds Station"
+        },
+        airport: {
+          title: "LBA Airport",
+          lookup: "LBA Airport"
+        }
+      };
 
-      var places = {};
-      for (key in lookups) {
-        places[key] = undefined;
-      }
-
-      for (key in lookups) {
-        geocoder.lookup(lookups[key], function (error, data) {
-          places[key] = data.results[0];
+      for (const key in places) {
+        geocoder.lookup(places[key].lookup, function (error, data) {
+          places[key].place = data.results[0];
 
           checkPlaces(places);
         }, { limitToCountries: "GB" });
       }
 
-      var placesPassed = false;
+      let placesPassed = false;
       function checkPlaces(places) {
         if (placesPassed) return;
 
-        for (key in places) {
-          if (places[key] === undefined) return;
+        for (const key in places) {
+          if (places[key].place === undefined) return;
+        }
+
+        placesPassed = true;
+
+        createAnnotations(places);
+      }
+
+      function createAnnotations(places) {
+        for (const key in places) {
+          places[key].annotation = new mapkit.MarkerAnnotation(places[key].place.coordinate, {
+            color: bsPrimary,
+            title: places[key].title,
+            glyphImage: { 1: places[key].glyphImage }
+          });
+
+          switch (key) {
+            case "crownePlaza":
+              places[key].annotation.selected = true;
+              break;
+            default:
+            places[key].annotation.displayPriority = mapkit.Annotation.DisplayPriority.High;
+              break;
+          }
         }
 
         createMap(places);
-      }
+      };
+
+      let map;
 
       function createMap(places) {
-        var map = new mapkit.Map("map", {
-          center: places.crownePlaza.coordinate,
-          tintColor: bsPrimary,
-          pointOfInterestFilter: pointOfInterestFilter
-        });
-
-        var annotations = {};
-        for (key in places) {
-          annotations[key] = new mapkit.Annotation(places[key].coordinate, function (coordinate, options) {
-            var div = document.createElement("div");
-            div.className = "popover";
-            div.textContent = options.title;
-
-            return div;
-          }, {
-            title: places[key].name
-          });
-
-          map.addAnnotation(annotations[key]);
+        const annotations = [];
+        for (const key in places) {
+          annotations.push(places[key].annotation);
         }
+
+        map = new mapkit.Map("map", {
+          region: places.crownePlaza.place.region,
+          center: places.crownePlaza.place.coordinate,
+          tintColor: bsPrimary,
+          pointOfInterestFilter: pointOfInterestFilter,
+          annotations: annotations
+        });
       }
 
       var collapsibleCar = document.getElementById("collapseCar");
@@ -268,30 +305,64 @@
       var collapsibleAir = document.getElementById("collapseAir");
 
       collapsibleCar.addEventListener('show.bs.collapse', function () {
-        map.showItems([ crownePlazaAnnotation ], { animate: true });
+        geocoder.lookup("M621, Holbeck", function (error, data) {
+          directions.route({
+            origin: data.results[0],
+            destination: places.crownePlaza.place,
+            transportType: mapkit.Directions.Transport.Walking,
+            arrivalDate: new Date(2022, 03, 26, 12)
+          }, function (error, data) {
+            data.routes[0].polyline.style = style;
+
+            map.showItems([
+              places.crownePlaza.annotation,
+              data.routes[0].polyline
+            ], { animate: true });
+          });
+        }, {
+          region: places.crownePlaza.place.region,
+          limitToCountries: "GB"
+        });
+
+        map.removeOverlays(map.overlays);
       });
 
       collapsibleTrain.addEventListener('show.bs.collapse', function () {
-        map.showItems([
-          crownePlazaAnnotation,
-          trainStationAnnotation
-        ], { animate: true });
-
         directions.route({
-          origin: trainStation,
-          destination: crownePlaza,
+          origin: places.trainStation.place,
+          destination: places.crownePlaza.place,
           transportType: mapkit.Directions.Transport.Walking,
           arrivalDate: new Date(2022, 03, 26, 12)
         }, function (error, data) {
-          map.showItems([ data.routes[0].polyline ], { animate: true });
+          data.routes[0].polyline.style = style;
+
+          map.showItems([
+            places.crownePlaza.annotation,
+            places.trainStation.annotation,
+            data.routes[0].polyline
+          ], { animate: true });
         });
+
+        map.removeOverlays(map.overlays);
       });
 
       collapsibleAir.addEventListener('show.bs.collapse', function () {
-        map.showItems([
-          crownePlazaAnnotation,
-          airportAnnotation
-        ], { animate: true });
+        directions.route({
+          origin: places.airport.place,
+          destination: places.crownePlaza.place,
+          transportType: mapkit.Directions.Transport.Automobile,
+          arrivalDate: new Date(2022, 03, 26, 12)
+        }, function (error, data) {
+          data.routes[0].polyline.style = style;
+
+          map.showItems([
+            places.crownePlaza.annotation,
+            places.airport.annotation,
+            data.routes[0].polyline
+          ], { animate: true });
+        });
+
+        map.removeOverlays(map.overlays);
       });
     </script>
   </body>
