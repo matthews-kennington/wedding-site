@@ -222,22 +222,26 @@
         color: "#202e52",
         title: "Crowne Plaza",
         subtitle: "Leeds",
-        selected: true
+        selected: true,
+        glyphText: "🏩"
       });
 
       var busStationAnnotation = new mapkit.MarkerAnnotation(busStation, {
         title: "Bus Station",
-        subtitle: "Leeds"
+        subtitle: "Leeds",
+        glyphText: "🚏"
       });
 
       var trainStationAnnotation = new mapkit.MarkerAnnotation(trainStation, {
         title: "Train Station",
-        subtitle: "Leeds"
+        subtitle: "Leeds",
+        glyphText: "🚉"
       });
 
       var airportAnnotation = new mapkit.MarkerAnnotation(airport, {
         title: "Airport",
-        subtitle: "Leeds Bradford LBA"
+        subtitle: "Leeds Bradford LBA",
+        glyphText: "✈️"
       });
 
       var pointOfInterestFilter = new mapkit.PointOfInterestFilter.including([
