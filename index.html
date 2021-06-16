@@ -216,6 +216,8 @@
       var trainStation = new mapkit.Coordinate(53.794379, -1.548459);
       var airport = new mapkit.Coordinate(53.869003, -1.659751);
 
+      var crownePlazaRegion = mapkit.CoordinateRegion(crownePlaza);
+
       var crownePlazaAnnotation = new mapkit.MarkerAnnotation(crownePlaza, {
         color: "#202e52",
         title: "Crowne Plaza",
@@ -256,6 +258,7 @@
       ]);
 
       var map = new mapkit.Map("map", {
+        region: crownePlazaRegion,
         center: crownePlaza,
         tintColor: primary,
         pointOfInterestFilter: pointOfInterestFilter,
