@@ -209,36 +209,25 @@
         mapkit.PointOfInterestCategory.Restroom
       ]);
 
-      var places = {
-        crownePlaza: undefined,
-        busStation: undefined,
-        trainStation: undefined,
-        airport: undefined
-      };
+      var lookups = {
+        crownePlaza: "Crowne Plaza, Leeds",
+        busStation: "Leeds Bus Station",
+        trainStation: "Leeds Station",
+        airport: "LBA Airport"
+      }
 
-      geocoder.lookup("Crowne Plaza, Leeds", function (error, data) {
-        places.crownePlaza = data.results[0];
+      var places = {};
+      lookups.forEach(function (lookup, index) {
+        places[index] = undefined;
+      });
 
-        checkPlaces();
-      }, { limitToCountries: "GB" });
+      lookups.forEach(function (lookup, index) {
+        geocoder.lookup(lookup, function (error, data) {
+          places[index] = data.results[0];
 
-      geocoder.lookup("Leeds Bus Station", function (error, data) {
-        places.busStation = data.results[0];
-
-        checkPlaces();
-      }, { limitToCountries: "GB" });
-
-      geocoder.lookup("Leeds Station", function (error, data) {
-        places.trainStation = data.results[0];
-
-        checkPlaces();
-      }, { limitToCountries: "GB" });
-
-      geocoder.lookup("LBA Airport", function (error, data) {
-        places.airport = data.results[0];
-
-        checkPlaces();
-      }, { limitToCountries: "GB" });
+          checkPlaces();
+        }, { limitToCountries: "GB" });
+      });
 
       var placesPassed = false;
       function checkPlaces() {
