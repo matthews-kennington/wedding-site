@@ -225,22 +225,22 @@
         geocoder.lookup(lookups[key], function (error, data) {
           places[key] = data.results[0];
 
-          checkPlaces();
+          checkPlaces(places);
         }, { limitToCountries: "GB" });
       }
 
       var placesPassed = false;
-      function checkPlaces() {
+      function checkPlaces(places) {
         if (placesPassed) return;
 
         for (key in places) {
           if (places[key] === undefined) break;
         }
 
-        createMap();
+        createMap(places);
       }
 
-      function createMap() {
+      function createMap(places) {
         var map = new mapkit.Map("map", {
           center: places.crownePlaza,
           tintColor: bsPrimary,
