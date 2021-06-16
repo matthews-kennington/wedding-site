@@ -126,7 +126,7 @@
             <p class="lead">How to get to the Crowne Plaza, Leeds</p>
             <div class="row">
               <div class="col">
-                <div id="map" class="im-thumbnail w-100 h-100"></div>
+                <div id="map" class="img-thumbnail w-100 h-100"></div>
               </div>
               <div class="col">
                 <div class="accordion" id="accordionFind">
@@ -212,30 +212,6 @@
       });
 
       var crownePlaza = new mapkit.Coordinate(53.796570, -1.557678);
-
-      var pointOfInterestFilter = new mapkit.PointOfInterestFilter.including([
-        mapkit.PointOfInterestCategory.Hotel,
-        mapkit.PointOfInterestCategory.Airport,
-        mapkit.PointOfInterestCategory.ATM,
-        mapkit.PointOfInterestCategory.Bank,
-        mapkit.PointOfInterestCategory.CarRental,
-        mapkit.PointOfInterestCategory.EVCharger,
-        mapkit.PointOfInterestCategory.FireStation,
-        mapkit.PointOfInterestCategory.GasStation,
-        mapkit.PointOfInterestCategory.Hospital,
-        mapkit.PointOfInterestCategory.Parking,
-        mapkit.PointOfInterestCategory.Pharmacy,
-        mapkit.PointOfInterestCategory.Police,
-        mapkit.PointOfInterestCategory.PublicTransport,
-        mapkit.PointOfInterestCategory.Restroom
-      ]);
-
-      var map = new mapkit.Map("map", {
-        center: crownePlaza,
-        tintColor: primary,
-        pointOfInterestFilter: pointOfInterestFilter
-      });
-
       var busStation = new mapkit.Coordinate(53.797183, -1.535897);
       var trainStation = new mapkit.Coordinate(53.794379, -1.548459);
       var airport = new mapkit.Coordinate(53.869003, -1.659751);
@@ -262,12 +238,34 @@
         subtitle: "Leeds Bradford LBA"
       });
 
-      map.showItems([
-        crownePlazaAnnotation,
-        busStationAnnotation,
-        trainStationAnnotation,
-        airportAnnotation
+      var pointOfInterestFilter = new mapkit.PointOfInterestFilter.including([
+        mapkit.PointOfInterestCategory.Hotel,
+        mapkit.PointOfInterestCategory.Airport,
+        mapkit.PointOfInterestCategory.ATM,
+        mapkit.PointOfInterestCategory.Bank,
+        mapkit.PointOfInterestCategory.CarRental,
+        mapkit.PointOfInterestCategory.EVCharger,
+        mapkit.PointOfInterestCategory.FireStation,
+        mapkit.PointOfInterestCategory.GasStation,
+        mapkit.PointOfInterestCategory.Hospital,
+        mapkit.PointOfInterestCategory.Parking,
+        mapkit.PointOfInterestCategory.Pharmacy,
+        mapkit.PointOfInterestCategory.Police,
+        mapkit.PointOfInterestCategory.PublicTransport,
+        mapkit.PointOfInterestCategory.Restroom
       ]);
+
+      var map = new mapkit.Map("map", {
+        center: crownePlaza,
+        tintColor: primary,
+        pointOfInterestFilter: pointOfInterestFilter,
+        annotations: [
+          crownePlazaAnnotation,
+          busStationAnnotation,
+          trainStationAnnotation,
+          airportAnnotation
+        ]
+      });
     </script>
   </body>
 </html>
