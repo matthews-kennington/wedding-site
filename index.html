@@ -132,7 +132,7 @@
                 <div class="accordion" id="accordionFind">
                   <div class="accordion-item">
                     <h4 class="accordion-header" id="headingCar">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCar" aria-expanded="false" aria-controls="collapseCar">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCar" aria-expanded="false" aria-controls="collapseCar" onclick="map.showItems([ crownePlazaAnnotation ], { animate: true });">
                         By Car
                       </button>
                     </h2>
@@ -144,7 +144,7 @@
                   </div>
                   <div class="accordion-item">
                     <h4 class="accordion-header" id="headingParking">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseParking" aria-expanded="false" aria-controls="collapseParking">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseParking" aria-expanded="false" aria-controls="collapseParking" onclick="map.showItems([ crownePlazaAnnotation ], { animate: true });">
                         Car Parking
                       </button>
                     </h2>
@@ -156,7 +156,7 @@
                   </div>
                   <div class="accordion-item">
                     <h4 class="accordion-header" id="headingSatNav">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSatNav" aria-expanded="false" aria-controls="collapseSatNav">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSatNav" aria-expanded="false" aria-controls="collapseSatNav" onclick="map.showItems([ crownePlazaAnnotation ], { animate: true });">
                         Satellite Navigation
                       </button>
                     </h2>
@@ -168,7 +168,7 @@
                   </div>
                   <div class="accordion-item">
                     <h4 class="accordion-header" id="headingTrain">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrain" aria-expanded="false" aria-controls="collapseTrain" onclick="map.showItems([ trainStation ], { animate: true });">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrain" aria-expanded="false" aria-controls="collapseTrain" onclick="map.showItems([ crownePlazaAnnotation, trainStationAnnotation ], { animate: true });">
                         By Train
                       </button>
                     </h2>
@@ -180,7 +180,7 @@
                   </div>
                   <div class="accordion-item">
                     <h4 class="accordion-header" id="headingAir">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAir" aria-expanded="false" aria-controls="collapseAir">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAir" aria-expanded="false" aria-controls="collapseAir" onclick="map.showItems([ crownePlazaAnnotation, airportAnnotation ], { animate: true });">
                         By Air
                       </button>
                     </h2>
