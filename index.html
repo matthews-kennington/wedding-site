@@ -217,52 +217,25 @@
       }
 
       var places = {};
-      lookups.forEach(function (lookup, index) {
-        places[index] = undefined;
-      });
+      for (key in lookups) {
+        places[key] = undefined;
+      }
 
-      lookups.forEach(function (lookup, index) {
+      for (key in lookups) {
         geocoder.lookup(lookup, function (error, data) {
-          places[index] = data.results[0];
+          places[key] = data.results[0];
 
           checkPlaces();
         }, { limitToCountries: "GB" });
-      });
+      }
 
       var placesPassed = false;
       function checkPlaces() {
         if (placesPassed) return;
 
-        var passed = true;
-
-        places.forEach(function (place) {
-          if (place === undefined) passed = false;
-        });
-
-        if (!passed) return;
-
-        createAnnotations();
-      }
-
-      var annotations = {
-        crownePlaza: undefined,
-        busStation: undefined,
-        trainStation: undefined,
-        airport: undefined
-      };
-
-      function createAnnotations() {
-        places.forEach(function (place, index) {
-          annotations[index] = mapkit.Annotation(places.crownePlaza.coordinate, function (coordinate, options) {
-            var div = document.createElement("div");
-            div.className = "popover";
-            div.textContent = options.title;
-
-            return div;
-          }, {
-            title: places.crownePlaza.name
-          });
-        });
+        for (key in places) {
+          if (places[key] === undefined) break;
+        }
 
         createMap();
       }
@@ -279,6 +252,21 @@
             annotations.airport
           ]
         });
+
+        var annotations = {};
+        for (key in places) {
+          annotations[key] = mapkit.Annotation(places[key].coordinate, function (coordinate, options) {
+            var div = document.createElement("div");
+            div.className = "popover";
+            div.textContent = options.title;
+
+            return div;
+          }, {
+            title: places[key].name
+          });
+
+          map.addAnnotation(annotations[key]);
+        }
       }
 
       var collapsibleCar = document.getElementById("collapseCar");
