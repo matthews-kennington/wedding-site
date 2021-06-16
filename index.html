@@ -126,7 +126,7 @@
             <p class="lead">How to get to the Crowne Plaza, Leeds</p>
             <div class="row">
               <div class="col">
-                <div id="map"></div>
+                <div id="map w-100" style="min-height: 50vh;"></div>
               </div>
               <div class="col">
                 <div class="accordion" id="accordionFind">
@@ -230,24 +230,24 @@
         new mapkit.Coordinate(53.869003, -1.659751)
       );
 
-      var crownePlazaAnnotation = new MarkerAnnotation(crownePlaza, {
+      var crownePlazaAnnotation = new mapkit.MarkerAnnotation(crownePlaza, {
         color: "#202e52",
         title: "Crowne Plaza",
         subtitle: "Leeds",
         selected: true
       });
 
-      var busStationAnnotation = new MarkerAnnotation(busStation, {
+      var busStationAnnotation = new mapkit.MarkerAnnotation(busStation, {
         title: "Bus Station",
         subtitle: "Leeds"
       });
 
-      var trainStationAnnotation = new MarkerAnnotation(trainStation, {
+      var trainStationAnnotation = new mapkit.MarkerAnnotation(trainStation, {
         title: "Train Station",
         subtitle: "Leeds"
       });
 
-      var airportAnnotation = new MarkerAnnotation(airport, {
+      var airportAnnotation = new mapkit.MarkerAnnotation(airport, {
         title: "Airport",
         subtitle: "Leeds Bradford LBA"
       });
