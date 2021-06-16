@@ -132,43 +132,21 @@
                 <div class="accordion" id="accordionFind">
                   <div class="accordion-item">
                     <h4 class="accordion-header" id="headingCar">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCar" aria-expanded="false" aria-controls="collapseCar" onclick="map.showItems([ crownePlazaAnnotation ], { animate: true });">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCar" aria-expanded="false" aria-controls="collapseCar">
                         By Car
                       </button>
                     </h2>
                     <div id="collapseCar" class="accordion-collapse collapse text-primary text-start" aria-labelledby="headingCar" data-bs-parent="#accordionFind">
                       <div class="accordion-body">
-                        When you come to Leeds, head for the City Centre at Junction 3 from the M621. Crowne Plaza is located within easy access to the M621, M1 and M62 in the City Centre of Leeds on Wellington Street.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h4 class="accordion-header" id="headingParking">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseParking" aria-expanded="false" aria-controls="collapseParking" onclick="map.showItems([ crownePlazaAnnotation ], { animate: true });">
-                        Car Parking
-                      </button>
-                    </h2>
-                    <div id="collapseParking" class="accordion-collapse collapse text-primary text-start" aria-labelledby="headingParking" data-bs-parent="#accordionFind">
-                      <div class="accordion-body">
-                        Crowne Plaza has 120 onsite parking spaces for you to use at £3.50 per vehicle or £10 per vehicle for 24 hours if you're staying overnight. If you wish to use the onsite parking facilities, you are required to enter and record your car registration number onto an online system. The Crowne Plaza team will be on hand to advise and assist you with this process on arrival.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h4 class="accordion-header" id="headingSatNav">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSatNav" aria-expanded="false" aria-controls="collapseSatNav" onclick="map.showItems([ crownePlazaAnnotation ], { animate: true });">
-                        Satellite Navigation
-                      </button>
-                    </h2>
-                    <div id="collapseSatNav" class="accordion-collapse collapse text-primary text-start" aria-labelledby="headingSatNav" data-bs-parent="#accordionFind">
-                      <div class="accordion-body">
-                        LS1 4AP
+                        <p>When you come to Leeds, head for the City Centre at Junction 3 from the M621. Crowne Plaza is located within easy access to the M621, M1 and M62 in the City Centre of Leeds on Wellington Street.</p>
+                        <p>Crowne Plaza has 120 onsite parking spaces for you to use at £3.50 per vehicle or £10 per vehicle for 24 hours if you're staying overnight. If you wish to use the onsite parking facilities, you are required to enter and record your car registration number onto an online system. The Crowne Plaza team will be on hand to advise and assist you with this process on arrival.</p>
+                        <p>LS1 4AP/p>
                       </div>
                     </div>
                   </div>
                   <div class="accordion-item">
                     <h4 class="accordion-header" id="headingTrain">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrain" aria-expanded="false" aria-controls="collapseTrain" onclick="map.showItems([ crownePlazaAnnotation, trainStationAnnotation ], { animate: true });">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrain" aria-expanded="false" aria-controls="collapseTrain">
                         By Train
                       </button>
                     </h2>
@@ -180,7 +158,7 @@
                   </div>
                   <div class="accordion-item">
                     <h4 class="accordion-header" id="headingAir">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAir" aria-expanded="false" aria-controls="collapseAir" onclick="map.showItems([ crownePlazaAnnotation, airportAnnotation ], { animate: true });">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAir" aria-expanded="false" aria-controls="collapseAir">
                         By Air
                       </button>
                     </h2>
@@ -202,48 +180,18 @@
     <script type="module" src="assets/js/starter.js"></script>
     <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
     <script>
-      var primary = "#202e52";
+      var bsPrimary = getComputedStyle(document.documentElement).getPropertyValue("--bs-primary");
+
       var tokenId = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRWWTJZU0hUMk0ifQ.eyJpc3MiOiIzNFdVS1FCWFhIIiwiaWF0IjoxNjIzODQ4MzEwLCJleHAiOjE2NTUzMzc2MDAsIm9yaWdpbiI6IndlZGRpbmcubWF0dGhld3Mta2VubmluZ3Rvbi5jb20ifQ.WqERpuk9Ol5SZsEodrDas4FLRItWD9U1DWxIHwK14Beq3IYM6-p0JXDtoYX5xIth6xTGfW5YQBPvk4OmYR8Yjw";
 
       mapkit.init({
         authorizationCallback: function(done) {
-            done(tokenId);
+          done(tokenId);
         }
       });
 
-      var crownePlaza = new mapkit.Coordinate(53.796570, -1.557678);
-      var busStation = new mapkit.Coordinate(53.797183, -1.535897);
-      var trainStation = new mapkit.Coordinate(53.794379, -1.548459);
-      var airport = new mapkit.Coordinate(53.869003, -1.659751);
-
-      var crownePlazaRegion = new mapkit.CoordinateRegion(crownePlaza);
-
-      var crownePlazaAnnotation = new mapkit.MarkerAnnotation(crownePlaza, {
-        color: "#202e52",
-        title: "Crowne Plaza",
-        subtitle: "Leeds",
-        selected: true,
-        glyphText: "🏩"
-      });
-
-      var busStationAnnotation = new mapkit.MarkerAnnotation(busStation, {
-        title: "Bus Station",
-        subtitle: "Leeds",
-        glyphText: "🚏"
-      });
-
-      var trainStationAnnotation = new mapkit.MarkerAnnotation(trainStation, {
-        title: "Train Station",
-        subtitle: "Leeds",
-        glyphText: "🚉"
-      });
-
-      var airportAnnotation = new mapkit.MarkerAnnotation(airport, {
-        title: "Airport",
-        subtitle: "Leeds Bradford LBA",
-        glyphText: "✈️"
-      });
-
+      var directions = new mapkit.Directions();
+      var geocoder = new mapkit.Geocoder();
       var pointOfInterestFilter = new mapkit.PointOfInterestFilter.including([
         mapkit.PointOfInterestCategory.Hotel,
         mapkit.PointOfInterestCategory.Airport,
@@ -261,24 +209,119 @@
         mapkit.PointOfInterestCategory.Restroom
       ]);
 
-      var map = new mapkit.Map("map", {
-        center: crownePlaza,
-        tintColor: primary,
-        pointOfInterestFilter: pointOfInterestFilter,
-        annotations: [
-          crownePlazaAnnotation,
-          busStationAnnotation,
-          trainStationAnnotation,
-          airportAnnotation
-        ]
+      var places = {
+        crownePlaza: undefined,
+        busStation: undefined,
+        trainStation: undefined,
+        airport: undefined
+      };
+
+      geocoder.lookup("Crowne Plaza, Leeds", function (error, data) {
+        places.crownePlaza = data.places[0];
+
+        checkPlaces();
+      }, { limitToCountries: "GB" });
+
+      geocoder.lookup("Leeds Bus Station", function (error, data) {
+        places.busStation = data.places[0];
+
+        checkPlaces();
+      }, { limitToCountries: "GB" });
+
+      geocoder.lookup("Leeds Station", function (error, data) {
+        places.trainStation = data.places[0];
+
+        checkPlaces();
+      }, { limitToCountries: "GB" });
+
+      geocoder.lookup("LBA Airport", function (error, data) {
+        places.airport = data.places[0];
+
+        checkPlaces();
+      }, { limitToCountries: "GB" });
+
+      var placesPassed = false;
+      function checkPlaces() {
+        if (placesPassed) return;
+
+        var passed = true;
+
+        places.forEach(function (place) {
+          if (place === undefined) passed = false;
+        });
+
+        if (!passed) return;
+
+        createAnnotations();
+      }
+
+      var annotations = {
+        crownePlaza: undefined,
+        busStation: undefined,
+        trainStation: undefined,
+        airport: undefined
+      };
+
+      function createAnnotations() {
+        places.forEach(function (place, index) {
+          annotations[index] = mapkit.Annotation(places.crownePlaza.coordinate, function (coordinate, options) {
+            var div = document.createElement("div");
+            div.className = "popover";
+            div.textContent = options.title;
+
+            return div;
+          }, {
+            title: places.crownePlaza.name
+          });
+        });
+
+        createMap();
+      }
+
+      function createMap() {
+        var map = new mapkit.Map("map", {
+          center: places.crownePlaza,
+          tintColor: bsPrimary,
+          pointOfInterestFilter: pointOfInterestFilter,
+          annotations: [
+            annotations.crownePlaza,
+            annotations.busStation,
+            annotations.trainStation,
+            annotations.airport
+          ]
+        });
+      }
+
+      var collapsibleCar = document.getElementById("collapseCar");
+      var collapsibleTrain = document.getElementById("collapseTrain");
+      var collapsibleAir = document.getElementById("collapseAir");
+
+      collapsibleCar.addEventListener('show.bs.collapse', function () {
+        map.showItems([ crownePlazaAnnotation ], { animate: true });
       });
 
-      map.showItems([
+      collapsibleTrain.addEventListener('show.bs.collapse', function () {
+        map.showItems([
           crownePlazaAnnotation,
-          busStationAnnotation,
-          trainStationAnnotation,
+          trainStationAnnotation
+        ], { animate: true });
+
+        directions.route({
+          origin: trainStation,
+          destination: crownePlaza,
+          transportType: mapkit.Directions.Transport.Walking,
+          arrivalDate: new Date(2022, 03, 26, 12)
+        }, function (error, data) {
+          map.showItems([ data.routes[0].polyline ], { animate: true });
+        });
+      });
+
+      collapsibleAir.addEventListener('show.bs.collapse', function () {
+        map.showItems([
+          crownePlazaAnnotation,
           airportAnnotation
-        ]);
+        ], { animate: true });
+      });
     </script>
   </body>
 </html>
