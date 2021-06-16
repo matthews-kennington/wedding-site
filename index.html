@@ -222,7 +222,7 @@
       }
 
       for (key in lookups) {
-        geocoder.lookup(lookup, function (error, data) {
+        geocoder.lookup(lookups[key], function (error, data) {
           places[key] = data.results[0];
 
           checkPlaces();
