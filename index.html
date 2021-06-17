@@ -27,7 +27,11 @@
     <div class="block block-fill-height text-center text-shadow-sm-primary">
       <div class="block-xs-middle">
         <div class="block-foreground">
-          <h1 class="display-1 font-blooming-elegant pulse user-select-none">M<span class="font-doodles-2 font-50">6</span>K</h1>
+          <h1 class="display-1 font-blooming-elegant user-select-none">
+            <div class="font-doodles-1 font-75 mb-n3">w</div>
+            <div class="pulse">M<span class="font-doodles-2 font-50">6</span>K</div>
+            <div class="font-doodles-1 font-75 mt-n3" style="transform: rotate(180deg);">w</div>
+          </h1>
           <h2 class="display-2 font-doodles-1 continue user-select-none">4</h2>
         </div>
         <div class="block-background" style="background-image: url('assets/video/hero-frame.jpg'); background-position: center center; background-size: cover;">
@@ -43,12 +47,12 @@
       </div>
     </div>
 
-    <div id="how-we-met" class="block block-fill-height text-center px-0">
+    <div id="how-we-met" class="block text-center px-0">
       <div class="block-xs-middle">
         <div class="block-foreground">
           <div class="container-fluid">
             <h2 class="block-title text-shadow-sm-primary">How We Met</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center align-items-center g-4 pb-4" style="overflow-x: hidden;">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-around align-items-center g-4 pb-4" style="overflow-x: hidden;">
               <div class="col">
                 <div class="card shadow img-thumbnail text-primary text-start" style="transform: rotate(-4deg);">
                   <img src="assets/img/how-we-met-1.jpeg" class="card-img-top" alt="Kristian & Paul">
@@ -97,23 +101,20 @@
       </div>
     </div>
 
-    <div id="engagement" class="block block-fill-height text-center">
-      <div class="block-xs-middle">
-        <div class="block-foreground w-100">
-          <h2 class="block-title text-shadow-sm-primary">Our Engagement</h2>
+    <div id="engagement" class="block text-center px-0">
+      <div class="ratio ratio-16x9">
+        <div class="block text-shadow-sm-primary" style="left: 50%; z-index: 1; width: auto; height: auto; transform: translateX(-50%);">
+          <h2 class="block-title">Our Engagement</h2>
           <p class="lead">22<sup>nd</sup> November 2020</p>
-          <div class="ratio ratio-16x9">
-            <video class="img-thumbnail rounded-3" autoplay loop muted controls preload="auto" poster="assets/video/engagement-frame.jpg">
-              <source src="assets/video/engagement-4k.mov" type="video/mp4">
-              <source src="assets/video/engagement-hd-1080p.mov" type="video/mp4" media="(max-width: 1920px)">
-              <source src="assets/video/engagement-hd-720p.mov" type="video/mp4" media="(max-width: 1280px)">
-              <source src="assets/video/engagement-large-540p.mov" type="video/mp4" media="(max-width: 960px)">
-              <source src="assets/video/engagement-sd-480p.mov" type="video/mp4" media="(max-width: 640px)">
-              <source src="assets/video/engagement-small.mov" type="video/mp4" media="(max-width: 428px)">
-            </video>
-          </div>
         </div>
-        <div class="block-background" style="background-image: url('assets/img/artwork.png'); background-repeat: no-repeat; background-position: center center; background-size: contain;"></div>
+        <video autoplay loop muted controls preload="auto" poster="assets/video/engagement-frame.jpg">
+          <source src="assets/video/engagement-4k.mov" type="video/mp4">
+          <source src="assets/video/engagement-hd-1080p.mov" type="video/mp4" media="(max-width: 1920px)">
+          <source src="assets/video/engagement-hd-720p.mov" type="video/mp4" media="(max-width: 1280px)">
+          <source src="assets/video/engagement-large-540p.mov" type="video/mp4" media="(max-width: 960px)">
+          <source src="assets/video/engagement-sd-480p.mov" type="video/mp4" media="(max-width: 640px)">
+          <source src="assets/video/engagement-small.mov" type="video/mp4" media="(max-width: 428px)">
+        </video>
       </div>
     </div>
 
@@ -123,15 +124,15 @@
           <div class="container-fluid">
             <h2 class="block-title text-shadow-sm-primary">The Venue</h2>
             <h3 class="display-2">Crowne Plaza, Leeds</h3>
-            <h3>How to find the venue</h3>
-            <p>How to get to the Crowne Plaza, Leeds</p>
             <div class="row align-items-center">
               <div class="col-12 col-md-6 mb-3">
                 <div class="ratio ratio-4x3">
                   <div id="map" class="img-thumbnail"></div>
                 </div>
               </div>
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-md-6 text-md-start">
+                <h4>How to find the venue</h4>
+                <p>How to get to the Crowne Plaza, Leeds</p>
                 <div class="accordion" id="accordionFind">
                   <div class="accordion-item">
                     <h4 class="accordion-header" id="headingCar">
@@ -159,6 +160,7 @@
                     <div id="collapseTrain" class="accordion-collapse collapse text-primary text-start" aria-labelledby="headingTrain" data-bs-parent="#accordionFind">
                       <div class="accordion-body">
                         <p>Exit the station by the City Square exit, turn left onto Wellington Street, the hotel is located 0.5 miles on the left hand side.</p>
+                        <a class="btn btn-secondary" href="https://nationalrail.co.uk/stations_destinations/LDS.aspx" target="_blank">National Rail</a>
                       </div>
                     </div>
                   </div>
@@ -171,7 +173,8 @@
                     <div id="collapseAir" class="accordion-collapse collapse text-primary text-start" aria-labelledby="headingAir" data-bs-parent="#accordionFind">
                       <div class="accordion-body">
                         <p>Leeds Bradford LBA distance 12 miles or 20 minutes by taxi £22 fare.</p>
-                        <a class="btn btn-secondary" href="https://m.uber.com/ul?client_id=zA7oCmocQmnmo6_cPLyBds7MoGvAVVhZ&action=setPickup&pickup=my_location&dropoff[latitude]=53.796570&dropoff[longitude]=-1.557678&dropoff[nickname]=Crowne%20Plaza%2C%20Leeds&dropoff[formatted_address]=Crowne%20Plaza%20Leeds%0AWellington%20Street%0ALeeds%2C%20LS1%204DL%0AUnited%20Kingdom">Book an Uber</a>
+                        <a class="btn btn-secondary" href="https://leedsbradfordairport.co.uk" target="_blank">Leeds Bradford Airport</a>
+                        <a class="btn btn-secondary" href="https://m.uber.com/ul?client_id=zA7oCmocQmnmo6_cPLyBds7MoGvAVVhZ&action=setPickup&pickup=my_location&dropoff[latitude]=53.796570&dropoff[longitude]=-1.557678&dropoff[nickname]=Crowne%20Plaza%2C%20Leeds&dropoff[formatted_address]=Crowne%20Plaza%20Leeds%0AWellington%20Street%0ALeeds%2C%20LS1%204DL%0AUnited%20Kingdom" target="_blank">Book an Uber</a>
                       </div>
                     </div>
                   </div>
@@ -184,12 +187,111 @@
       </div>
     </div>
 
+    <div class="modal fade" id="thanksModal" tabindex="-1" aria-labelledby="thanksModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered text-center">
+        <div class="modal-content bg-primary">
+          <div class="modal-header border-bottom-0">
+            <h1 class="modal-title font-blooming-elegant" id="thanksModalLabel">Hello,</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead" id="thanksModalBody">Thank you for confirming your attendance at our wedding.</p>
+          </div>
+          <div class="modal-footer border-top-0">
+            <a class="btn btn-primary" href="../assets/wedding.ics" download="Kristian & Paul's Wedding">Add to Calendar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="assets/js/starter.js"></script>
     <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
     <script>
       const bsPrimary = getComputedStyle(document.documentElement).getPropertyValue("--bs-primary");
-
       const tokenId = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRWWTJZU0hUMk0ifQ.eyJpc3MiOiIzNFdVS1FCWFhIIiwiaWF0IjoxNjIzODQ4MzEwLCJleHAiOjE2NTUzMzc2MDAsIm9yaWdpbiI6IndlZGRpbmcubWF0dGhld3Mta2VubmluZ3Rvbi5jb20ifQ.WqERpuk9Ol5SZsEodrDas4FLRItWD9U1DWxIHwK14Beq3IYM6-p0JXDtoYX5xIth6xTGfW5YQBPvk4OmYR8Yjw";
+
+      const places = {
+        crownePlaza: {
+          title: "Crowne Plaza",
+          glyphImage: "assets/img/mk.png",
+          lookup: "Crowne Plaza, Leeds"
+        },
+        busStation: {
+          title: "Bus Station",
+          glyphImage: "assets/img/metro.png",
+          lookup: "Leeds Bus Station"
+        },
+        trainStation: {
+          title: "Train Station",
+          glyphImage: "assets/img/national-rail.png",
+          lookup: "Leeds Station"
+        },
+        airport: {
+          title: "LBA Airport",
+          glyphImage: "assets/img/lba-airport.png",
+          lookup: "LBA Airport"
+        }
+      };
+
+      const accordian = {
+        car: {
+          active: false,
+          collapsible: document.getElementById("collapseCar")
+        },
+        train: {
+          active: false,
+          collapsible: document.getElementById("collapseTrain")
+        },
+        air: {
+          active: false,
+          collapsible: document.getElementById("collapseAir")
+        }
+      }
+
+      const heroVideo = document.getElementById("hero-video");
+      const collapsibleCar = document.getElementById("collapseCar");
+      const collapsibleTrain = document.getElementById("collapseTrain");
+      const collapsibleAir = document.getElementById("collapseAir");
+
+      const heroVideoPromise = heroVideo.play();
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const searchParams = new URLSearchParams(window.location.search);
+
+        if (searchParams.has("modal")) {
+          const modalSearchParam = searchParams.get("modal");
+          const nameSearchParam = searchParams.get("name");
+          const attendingSearchParam = searchParams.get("attending") === "Yes";
+
+          const thanksModalLabel = document.getElementById("thanksModalLabel");
+          const thanksModalBody = document.getElementById("thanksModalBody");
+
+          const firstName = nameSearchParam.split(' ')[0];
+
+          thanksModalLabel.textContent = `Hello ${firstName},`;
+
+          switch (attendingSearchParam) {
+            case true:
+              thanksModalBody.textContent = "Thank you for confirming your attendance at our wedding, we look forward to seeing you!";
+              break;
+            case false:
+              thanksModalBody.textContent = "We're sorry you can't join us.";
+              break;
+          }
+
+          if (modalSearchParam === "thanks") {
+            const thanksModal = new Modal(document.getElementById("thanksModal"));
+
+            thanksModal.show();
+          }
+        }
+      });
+
+      if (heroVideoPromise !== undefined) {
+        heroVideoPromise.catch(function (error) {
+          heroVideo.remove();
+        });
+      }
 
       mapkit.init({
         authorizationCallback: function(done) {
@@ -220,26 +322,10 @@
         strokeColor: bsPrimary,
         strokeOpacity: .8
       });
-
-      const places = {
-        crownePlaza: {
-          title: "Crowne Plaza",
-          glyphImage: "assets/img/mk.png",
-          lookup: "Crowne Plaza, Leeds"
-        },
-        busStation: {
-          title: "Bus Station",
-          lookup: "Leeds Bus Station"
-        },
-        trainStation: {
-          title: "Train Station",
-          lookup: "Leeds Station"
-        },
-        airport: {
-          title: "LBA Airport",
-          lookup: "LBA Airport"
-        }
-      };
+      const lineGradient = new mapkit.LineGradient({
+        0: "transparent",
+        1: bsPrimary
+      });
 
       for (const key in places) {
         geocoder.lookup(places[key].lookup, function (error, data) {
@@ -269,16 +355,29 @@
             title: places[key].title,
             glyphImage: { 1: places[key].glyphImage }
           });
-
-          switch (key) {
-            case "crownePlaza":
-              places[key].annotation.selected = true;
-              break;
-            default:
-            places[key].annotation.displayPriority = mapkit.Annotation.DisplayPriority.High;
-              break;
-          }
         }
+
+        places.crownePlaza.annotation.selected = true;
+
+        places.busStation.annotation.displayPriority = mapkit.Annotation.DisplayPriority.High;
+        places.trainStation.annotation.displayPriority = mapkit.Annotation.DisplayPriority.High;
+        places.airport.annotation.displayPriority = mapkit.Annotation.DisplayPriority.High;
+
+        places.trainStation.annotation.addEventListener("select", function (event) {
+          if (accordian.train.active) return;
+
+          const bsTarget = document.querySelector('[data-bs-target="#collapseTrain"]');
+
+          bsTarget.click();
+        });
+
+        places.airport.annotation.addEventListener("select", function (event) {
+          if (accordian.air.active) return;
+
+          const bsTarget = document.querySelector('[data-bs-target="#collapseAir"]');
+
+          bsTarget.click();
+        });
 
         createMap(places);
       };
@@ -300,11 +399,9 @@
         });
       }
 
-      var collapsibleCar = document.getElementById("collapseCar");
-      var collapsibleTrain = document.getElementById("collapseTrain");
-      var collapsibleAir = document.getElementById("collapseAir");
+      accordian.car.collapsible.addEventListener('show.bs.collapse', function () {
+        accordian.car.active = true;
 
-      collapsibleCar.addEventListener('show.bs.collapse', function () {
         geocoder.lookup("M621, Holbeck", function (error, data) {
           directions.route({
             origin: data.results[0],
@@ -327,7 +424,9 @@
         map.removeOverlays(map.overlays);
       });
 
-      collapsibleTrain.addEventListener('show.bs.collapse', function () {
+      accordian.train.collapsible.addEventListener('show.bs.collapse', function () {
+        accordian.train.active = true;
+
         directions.route({
           origin: places.trainStation.place,
           destination: places.crownePlaza.place,
@@ -346,7 +445,9 @@
         map.removeOverlays(map.overlays);
       });
 
-      collapsibleAir.addEventListener('show.bs.collapse', function () {
+      accordian.air.collapsible.addEventListener('show.bs.collapse', function () {
+        accordian.air.active = true;
+
         directions.route({
           origin: places.airport.place,
           destination: places.crownePlaza.place,
@@ -363,21 +464,21 @@
         });
       });
 
-      collapsibleCar.addEventListener('hide.bs.collapse', function () {
+      accordian.car.collapsible.addEventListener('hide.bs.collapse', function () {
+        accordian.car.active = false;
         map.removeOverlays(map.overlays);
-
         map.showItems([ places.crownePlaza.annotation ], { animate: true });
       });
 
-      collapsibleTrain.addEventListener('hide.bs.collapse', function () {
+      accordian.train.collapsible.addEventListener('hide.bs.collapse', function () {
+        accordian.train.active = false;
         map.removeOverlays(map.overlays);
-
         map.showItems([ places.crownePlaza.annotation ], { animate: true });
       });
 
-      collapsibleAir.addEventListener('hide.bs.collapse', function () {
+      accordian.air.collapsible.addEventListener('hide.bs.collapse', function () {
+        accordian.air.active = false;
         map.removeOverlays(map.overlays);
-
         map.showItems([ places.crownePlaza.annotation ], { animate: true });
       });
     </script>

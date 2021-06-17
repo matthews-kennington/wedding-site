@@ -18,14 +18,5 @@ import "../../node_modules/bootstrap/js/dist/base-component.js";
 
 // Then your specific components
 import "../../node_modules/bootstrap/js/dist/collapse.js";
+import "../../node_modules/bootstrap/js/dist/modal.js";
 import "../../node_modules/bootstrap/js/dist/scrollspy.js";
-
-var heroVideo = document.getElementById("hero-video");
-
-var heroVideoPromise = heroVideo.play();
-
-if (heroVideoPromise !== undefined) {
-  heroVideoPromise.catch(function (error) {
-    heroVideo.remove();
-  });
-}
