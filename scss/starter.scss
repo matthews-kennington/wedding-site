@@ -4,8 +4,9 @@
 @import "pantone-css/scss/pantone";
 
 // Toggle global options
-$enable-gradients: true;
-$enable-shadows:   true;
+$enable-gradients:        true;
+$enable-negative-margins: true;
+$enable-shadows:          true;
 
 // Color System
 $primary: $pantone-2767-cp;
@@ -57,6 +58,10 @@ $font-path-blooming-elegant-doodles-2:    "#{$font-path}blooming-elegant-doodles
 
 .font-50 {
   font-size: 50%;
+}
+
+.font-75 {
+  font-size: 75%;
 }
 
 .text-shadow {
