@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/starter.css">
     <title>Matthews-Kennington Wedding</title>
   </head>
-  <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
+  <body class="position-relative" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
     <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark navbar-transparent text-center text-shadow-primary">
       <div class="container-fluid flex-lg-column">
         <button class="navbar-toggler invisible">
@@ -46,14 +46,7 @@
           <h2 class="display-2 font-doodles-1 continue user-select-none">4</h2>
         </div>
         <div class="block-background" style="background-image: url('assets/video/hero-frame.jpg'); background-position: center center; background-size: cover;">
-          <video id="hero-video" autoplay loop muted preload="auto" poster="assets/video/hero-frame.jpg">
-            <source src="assets/video/hero-4k.mov" type="video/mp4">
-            <source src="assets/video/hero-hd-1080p.mov" type="video/mp4" media="(max-width: 1920px)">
-            <source src="assets/video/hero-hd-720p.mov" type="video/mp4" media="(max-width: 1280px)">
-            <source src="assets/video/hero-large-540p.mov" type="video/mp4" media="(max-width: 960px)">
-            <source src="assets/video/hero-sd-480p.mov" type="video/mp4" media="(max-width: 640px)">
-            <source src="assets/video/hero-small.mov" type="video/mp4" media="(max-width: 428px)">
-          </video>
+          <iframe src="https://player.vimeo.com/video/564965682?autopause=false&background=true" width="3840" height="2160" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position: absolute; top: 50%; left: 50%; width: 177.77777778vh; min-width: 100%; height: 56.25vw; min-height: 100%; transform: translate(-50%, -50%); object-fit: fill;"></iframe>
         </div>
       </div>
     </div>
@@ -111,20 +104,16 @@
     </div>
 
     <div id="engagement" class="block text-center px-0">
-      <div class="ratio ratio-16x9">
-        <div class="block text-shadow-sm-primary" style="left: 50%; z-index: 1; width: auto; height: auto; transform: translateX(-50%);">
-          <h2 class="block-title">Our Engagement</h2>
-          <p class="lead">22<sup>nd</sup> November 2020</p>
+      <div class="block-foreground w-100">
+        <div class="ratio ratio-16x9">
+          <div class="block text-shadow-sm-primary" style="left: 50%; z-index: 1; width: auto; height: auto; transform: translateX(-50%);">
+            <h2 class="block-title">Our Engagement</h2>
+            <p class="lead">22<sup>nd</sup> November 2020</p>
+          </div>
+          <iframe src="https://player.vimeo.com/video/564974388?autopause=false&autoplay=true&pip=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <video autoplay loop muted controls preload="auto" poster="assets/video/engagement-frame.jpg">
-          <source src="assets/video/engagement-4k.mov" type="video/mp4">
-          <source src="assets/video/engagement-hd-1080p.mov" type="video/mp4" media="(max-width: 1920px)">
-          <source src="assets/video/engagement-hd-720p.mov" type="video/mp4" media="(max-width: 1280px)">
-          <source src="assets/video/engagement-large-540p.mov" type="video/mp4" media="(max-width: 960px)">
-          <source src="assets/video/engagement-sd-480p.mov" type="video/mp4" media="(max-width: 640px)">
-          <source src="assets/video/engagement-small.mov" type="video/mp4" media="(max-width: 428px)">
-        </video>
       </div>
+      <div class="block-background" style="background-image: url('assets/video/engagement-frame.jpg'); background-position: center center; background-size: cover;"></div>
     </div>
 
     <div id="venue" class="block text-center">
@@ -132,6 +121,29 @@
         <div class="container-fluid">
           <h2 class="block-title text-shadow-sm-primary">The Venue</h2>
           <h3 class="display-2">Crowne Plaza, Leeds</h3>
+          <div class="row justify-content-around align-items-center g-4 mb-3">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-1.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(6deg);">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-2.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-4deg);">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-3.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(2deg);">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-4.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-1deg);">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-5.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(3deg);">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-6.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-5deg);">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-7.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(7deg);">
+            </div>
+          </div>
           <div class="row align-items-center">
             <div class="col-12 col-md-6 mb-3">
               <div class="ratio ratio-4x3">
@@ -307,10 +319,6 @@
         }
       }
 
-      const heroVideo = document.getElementById("hero-video");
-
-      const heroVideoPromise = heroVideo.play();
-
       document.addEventListener("DOMContentLoaded", function() {
         const searchParams = new URLSearchParams(window.location.search);
 
@@ -342,12 +350,6 @@
           }
         }
       });
-
-      if (heroVideoPromise !== undefined) {
-        heroVideoPromise.catch(function (error) {
-          heroVideo.remove();
-        });
-      }
 
       mapkit.init({
         authorizationCallback: function(done) {
