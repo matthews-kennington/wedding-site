@@ -103,8 +103,8 @@
       <div class="block-background" style="background-image: url('assets/img/artwork-top.png'); background-repeat: no-repeat; background-position: center top; background-size: 100% auto;"></div>
     </div>
 
-    <div id="engagement" class="block text-center px-0">
-      <div class="block-foreground w-100">
+    <div id="engagement" class="block text-center p-0">
+      <div class="block-foreground d-block">
         <div class="ratio ratio-16x9">
           <div class="block text-shadow-sm-primary" style="left: 50%; z-index: 1; width: auto; height: auto; transform: translateX(-50%);">
             <h2 class="block-title">Our Engagement</h2>
@@ -113,7 +113,8 @@
           <iframe src="https://player.vimeo.com/video/564974388?autopause=false&autoplay=true&pip=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="block-background" style="background-image: url('assets/video/engagement-frame.jpg'); background-position: center center; background-size: cover;"></div>
+      <div class="block-background" style="background-image: url('assets/video/engagement-frame.jpg'); background-position: center center; background-size: cover;">
+      </div>
     </div>
 
     <div id="venue" class="block text-center">
@@ -123,31 +124,47 @@
           <h3 class="display-2">Crowne Plaza, Leeds</h3>
           <div class="row justify-content-around align-items-center g-4 mb-3">
             <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
-              <img src="assets/img/venue-1.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(6deg);">
+              <img src="assets/img/venue-1.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-10deg);">
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
-              <img src="assets/img/venue-2.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-4deg);">
+              <img src="assets/img/venue-2.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(8deg);">
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
-              <img src="assets/img/venue-3.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(2deg);">
+              <img src="assets/img/venue-3.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-6deg);">
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
-              <img src="assets/img/venue-4.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-1deg);">
+              <img src="assets/img/venue-4.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(4deg);">
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
-              <img src="assets/img/venue-5.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(3deg);">
+              <img src="assets/img/venue-5.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-2deg);">
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
-              <img src="assets/img/venue-6.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-5deg);">
+              <img src="assets/img/venue-6.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(1deg);">
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
-              <img src="assets/img/venue-7.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(7deg);">
+              <img src="assets/img/venue-7.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-3deg);">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-8.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(5deg);">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-9.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-7deg);">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-10.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(9deg);">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl">
+              <img src="assets/img/venue-11.jpg" class="img-thumbnail" alt="Crowne Plaza, Leeds" style="transform: rotate(-11deg);">
             </div>
           </div>
           <div class="row align-items-center">
             <div class="col-12 col-md-6 mb-3">
               <div class="ratio ratio-4x3">
-                <div id="map" class="img-thumbnail"></div>
+                <div id="map" class="img-thumbnail text-center text-primary d-flex justify-content-center align-items-center">
+                  <div id="map-spinner" class="spinner-border m-5" role="status">
+                    <span class="visually-hidden">Loading&hellip;</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="col-12 col-md-6 text-md-start">
@@ -348,6 +365,15 @@
 
             thanksModal.show();
           }
+        }
+      });
+
+      mapkit.addEventListener("configuration-change", function(event) {
+        switch (event.status) {
+          case "Initialized":
+            const mapSpinner = document.getElementById("map-spinner");
+            mapSpinner.remove();
+            break;
         }
       });
 
