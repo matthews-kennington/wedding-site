@@ -82,7 +82,7 @@ $font-path-blooming-elegant-doodles-2:    "#{$font-path}blooming-elegant-doodles
 
 .navbar.navbar-transparent {
   @include gradient-y($primary, $navbar-transparent-bg);
-  @include box-shadow("none");
+  @include box-shadow(none);
   transition: $transition-base;
 
   &.opening,
