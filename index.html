@@ -211,7 +211,9 @@
                   <div id="collapseTrain" class="accordion-collapse collapse text-primary text-start" aria-labelledby="headingTrain" data-bs-parent="#accordionFind">
                     <div class="accordion-body">
                       <p>Exit the station by the City Square exit, turn left onto Wellington Street, the hotel is located 0.5 miles on the left hand side.</p>
-                      <a class="btn btn-secondary" href="https://nationalrail.co.uk/stations_destinations/LDS.aspx" target="_blank">National Rail</a>
+                      <p>
+                        <a class="btn btn-secondary" href="https://www.nationalrail.co.uk/stations_destinations/LDS.aspx" target="_blank">National Rail</a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -224,8 +226,15 @@
                   <div id="collapseAir" class="accordion-collapse collapse text-primary text-start" aria-labelledby="headingAir" data-bs-parent="#accordionFind">
                     <div class="accordion-body">
                       <p>Leeds Bradford LBA distance 12 miles or 20 minutes by taxi £22 fare.</p>
-                      <a class="btn btn-secondary" href="https://leedsbradfordairport.co.uk" target="_blank">Leeds Bradford Airport</a>
-                      <a class="btn btn-secondary" href="https://m.uber.com/ul?client_id=zA7oCmocQmnmo6_cPLyBds7MoGvAVVhZ&action=setPickup&pickup=my_location&dropoff[latitude]=53.796570&dropoff[longitude]=-1.557678&dropoff[nickname]=Crowne%20Plaza%2C%20Leeds&dropoff[formatted_address]=Crowne%20Plaza%20Leeds%0AWellington%20Street%0ALeeds%2C%20LS1%204DL%0AUnited%20Kingdom" target="_blank">Book an Uber</a>
+                      <p>
+                        <a class="btn btn-secondary" href="https://leedsbradfordairport.co.uk" target="_blank">Leeds Bradford Airport</a>
+                        <a class="btn btn-secondary" href="https://m.uber.com/ul?client_id=zA7oCmocQmnmo6_cPLyBds7MoGvAVVhZ&action=setPickup&pickup=my_location&dropoff[latitude]=53.796570&dropoff[longitude]=-1.557678&dropoff[nickname]=Crowne%20Plaza%2C%20Leeds&dropoff[formatted_address]=Crowne%20Plaza%20Leeds%0AWellington%20Street%0ALeeds%2C%20LS1%204DL%0AUnited%20Kingdom" target="_blank">Book an Uber</a>
+                      </p>
+                      <p>Although Leeds Bradford LBA is closer to the venue, Manchester MAN is better for international travel, there is a direct train to Leeds Train Station.</p>
+                      <p>
+                        <a class="btn btn-secondary" href="https://manchesterairport.co.uk" target="_blank">Manchester Airport</a>
+                        <a class="btn btn-secondary" href="https://www.nationalrail.co.uk/stations_destinations/MIA.aspx" target="_blank">National Rail</a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -238,9 +247,11 @@
                   <div id="collapseCoach" class="accordion-collapse collapse text-primary text-start" aria-labelledby="headingCoach" data-bs-parent="#accordionFind">
                     <div class="accordion-body">
                       <p>The coach station in Leeds is operated by National Express and Megabus.</p>
-                      <a class="btn btn-secondary" href="https://wymetro.com/buses/bus-stations/leeds-city-bus-station" target="_blank">Metro</a>
-                      <a class="btn btn-secondary" href="https://nationalexpress.com/en/destinations/leeds" target="_blank">National Rail</a>
-                      <a class="btn btn-secondary" href="https://uk.megabus.com/city-guides/leeds" target="_blank">Megabus</a>
+                      <p>
+                        <a class="btn btn-secondary" href="https://wymetro.com/buses/bus-stations/leeds-city-bus-station" target="_blank">Metro</a>
+                        <a class="btn btn-secondary" href="https://nationalexpress.com/en/destinations/leeds" target="_blank">National Rail</a>
+                        <a class="btn btn-secondary" href="https://uk.megabus.com/city-guides/leeds" target="_blank">Megabus</a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -319,15 +330,25 @@
           glyphImage: "assets/img/metro.png",
           lookup: "Leeds Bus Station"
         },
-        trainStation: {
-          title: "Train Station",
+        leedsTrainStation: {
+          title: "Leeds Train Station",
           glyphImage: "assets/img/national-rail.png",
           lookup: "Leeds Station"
         },
-        airport: {
+        manchesterAirportTrainStation: {
+          title: "Manchester Train Station",
+          glyphImage: "assets/img/national-rail.png",
+          lookup: "Manchester Airport Station"
+        },
+        lbaAirport: {
           title: "LBA Airport",
           glyphImage: "assets/img/lba-airport.png",
           lookup: "LBA Airport"
+        },
+        manAirport: {
+          title: "MAN Airport",
+          glyphImage: "assets/img/man-airport.png",
+          lookup: "MAN Airport"
         }
       };
 
@@ -458,8 +479,8 @@
         places.crownePlaza.annotation.selected = true;
 
         places.busStation.annotation.displayPriority = mapkit.Annotation.DisplayPriority.High;
-        places.trainStation.annotation.displayPriority = mapkit.Annotation.DisplayPriority.High;
-        places.airport.annotation.displayPriority = mapkit.Annotation.DisplayPriority.High;
+        places.leedsTrainStation.annotation.displayPriority = mapkit.Annotation.DisplayPriority.High;
+        places.lbaAirport.annotation.displayPriority = mapkit.Annotation.DisplayPriority.High;
 
         places.busStation.annotation.addEventListener("select", function (event) {
           if (accordian.air.active) return;
@@ -469,7 +490,7 @@
           bsTarget.click();
         });
 
-        places.trainStation.annotation.addEventListener("select", function (event) {
+        places.leedsTrainStation.annotation.addEventListener("select", function (event) {
           if (accordian.train.active) return;
 
           const bsTarget = document.querySelector('[data-bs-target="#collapseTrain"]');
@@ -477,7 +498,23 @@
           bsTarget.click();
         });
 
-        places.airport.annotation.addEventListener("select", function (event) {
+        places.manchesterTrainStation.annotation.addEventListener("select", function (event) {
+          if (accordian.train.active) return;
+
+          const bsTarget = document.querySelector('[data-bs-target="#collapseTrain"]');
+
+          bsTarget.click();
+        });
+
+        places.lbaAirport.annotation.addEventListener("select", function (event) {
+          if (accordian.air.active) return;
+
+          const bsTarget = document.querySelector('[data-bs-target="#collapseAir"]');
+
+          bsTarget.click();
+        });
+
+        places.manAirport.annotation.addEventListener("select", function (event) {
           if (accordian.air.active) return;
 
           const bsTarget = document.querySelector('[data-bs-target="#collapseAir"]');
@@ -534,7 +571,7 @@
         accordian.train.active = true;
 
         directions.route({
-          origin: places.trainStation.place,
+          origin: places.leedsTrainStation.place,
           destination: places.crownePlaza.place,
           transportType: mapkit.Directions.Transport.Walking,
           arrivalDate: new Date(2022, 03, 26, 11, 30)
@@ -543,7 +580,7 @@
 
           map.showItems([
             places.crownePlaza.annotation,
-            places.trainStation.annotation,
+            places.leedsTrainStation.annotation,
             data.routes[0].polyline
           ], { animate: true });
         });
@@ -555,7 +592,7 @@
         accordian.air.active = true;
 
         directions.route({
-          origin: places.airport.place,
+          origin: places.lbaAirport.place,
           destination: places.crownePlaza.place,
           transportType: mapkit.Directions.Transport.Automobile,
           arrivalDate: new Date(2022, 03, 26, 11, 30)
@@ -564,7 +601,46 @@
 
           map.showItems([
             places.crownePlaza.annotation,
-            places.airport.annotation,
+            places.lbaAirport.annotation,
+            places.manAirport.annotation,
+            places.manchesterAirportTrainStation.annotation,
+            places.leedsTrainStation.annotation,
+            data.routes[0].polyline
+          ], { animate: true });
+        });
+
+        directions.route({
+          origin: places.manAirport.place,
+          destination: places.manchesterAirportTrainStation.place,
+          transportType: mapkit.Directions.Transport.Walking,
+          arrivalDate: new Date(2022, 03, 26, 11, 30)
+        }, function (error, data) {
+          data.routes[0].polyline.style = style;
+
+          map.showItems([
+            places.crownePlaza.annotation,
+            places.lbaAirport.annotation,
+            places.manAirport.annotation,
+            places.manchesterAirportTrainStation.annotation,
+            places.leedsTrainStation.annotation,
+            data.routes[0].polyline
+          ], { animate: true });
+        });
+
+        directions.route({
+          origin: places.leedsTrainStation.place,
+          destination: places.crownePlaza.place,
+          transportType: mapkit.Directions.Transport.Walking,
+          arrivalDate: new Date(2022, 03, 26, 11, 30)
+        }, function (error, data) {
+          data.routes[0].polyline.style = style;
+
+          map.showItems([
+            places.crownePlaza.annotation,
+            places.lbaAirport.annotation,
+            places.manAirport.annotation,
+            places.manchesterAirportTrainStation.annotation,
+            places.leedsTrainStation.annotation,
             data.routes[0].polyline
           ], { animate: true });
         });
