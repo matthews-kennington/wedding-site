@@ -82,6 +82,14 @@ $font-path-blooming-elegant-doodles-2:    "#{$font-path}blooming-elegant-doodles
 
 .navbar.navbar-transparent {
   @include gradient-y($primary, $navbar-transparent-bg);
+  @include box-shadow("none");
+  transition: $transition-base;
+
+  &.opening,
+  &.open {
+    @include gradient-y-three-colors($primary, $primary, 100%, $navbar-transparent-bg);
+    @include box-shadow(0 1rem 3rem rgba($primary, .175));
+  }
 }
 
 // Style Bootstrap icons
