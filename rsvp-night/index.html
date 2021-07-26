@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="../assets/css/starter.css">
+    <link rel="icon" type="image/png" href="../assets/img/mk.png">
+    <title>RSVP - Matthews-Kennington Wedding</title>
+
+    <meta property="og:title" content="Matthews-Kennington Wedding RSVP">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://wedding.matthews-kennington.com/assets/img/rsvp-bg.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="3945">
+    <meta property="og:image:height" content="2959">
+    <meta property="og:image:alt" content="Kristian & Paul Matthews-Kennington">
+    <meta property="og:description" content="RSVP the marriage of Kristian Matthews & Paul Kennington.">
+    <meta property="og:url" content="https://wedding.matthews-kennington.com/rsvp">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Matthews-Kennington Wedding">
+  </head>
+  <body>
+    <script src="https://unpkg.com/tripetto-runner-foundation"></script>
+    <script src="https://unpkg.com/tripetto-runner-chat"></script>
+    <script src="https://unpkg.com/tripetto-services"></script>
+    <script>
+      var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiaE5WcTErcUxzNXByWlNsQ1VkU2NwZHArSThHRXpRU0lSMDBiU3U2VHNZdz0iLCJkZWZpbml0aW9uIjoibWYyWmljejNPWkYyYm56d3UxNlB2OE9jeW9YZmdoYVdyZThGc2RMd2pOZz0iLCJ0eXBlIjoiY29sbGVjdCJ9.eyaN57uuKLPp9xQf7qigykpDOcr8DSCLS6mDKUIGHHg" });
+
+      TripettoChat.run({
+          element: document.body, /* Or supply your own element here */
+          definition: tripetto.definition,
+          styles: tripetto.styles,
+          l10n: tripetto.l10n,
+          locale: tripetto.locale,
+          translations: tripetto.translations,
+          attachments: tripetto.attachments,
+          onSubmit: tripetto.onSubmit,
+          snapshot: tripetto.snapshot,
+          onPause: tripetto.onPause,
+          persistent: true
+      });
+    </script>
+  </body>
+</html>
