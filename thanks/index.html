@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="../assets/css/starter.css">
+    <link rel="icon" type="image/png" href="../assets/img/mk.png">
+    <title>Thank You - Matthews-Kennington Wedding</title>
+
+    <meta property="og:title" content="Matthews-Kennington Wedding">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://wedding.matthews-kennington.com/assets/img/preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="3945">
+    <meta property="og:image:height" content="2959">
+    <meta property="og:image:alt" content="Kristian & Paul Matthews-Kennington">
+    <meta property="og:description" content="Thank you for celebrating the marriage of Kristian & Paul Matthews-Kennington.">
+    <meta property="og:url" content="https://wedding.matthews-kennington.com/thanks">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Matthews-Kennington Wedding">
+  </head>
+  <body>
+    <div class="block block-fill-height text-center text-shadow-sm-primary">
+      <div class="block-xs-middle">
+        <div class="block-foreground">
+          <h1 class="display-1" id="nameLabel"></h1>
+          <p class="lead">Thank You</p>
+          <p class="display-1 font-blooming-elegant">Kristian & Paul Matthews-Kennington</p>
+          <p class="lead">26<sup>th</sup> March 2022</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@epickris/bootstrap-kit@2/dist/js/kit.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const searchParams = new URLSearchParams(window.location.search);
+
+        if (searchParams.has("name")) {
+          const nameSearchParam = searchParams.get("name") || "";
+
+          const nameLabel = document.getElementById("nameLabel");
+
+          nameLabel.textContent = nameSearchParam;
+        }
+      });
+    </script>
+  </body>
+</html>
