@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="../assets/css/starter.css">
+    <link rel="icon" type="image/png" href="../assets/img/mk.png">
+    <title>Album - Matthews-Kennington Wedding</title>
+
+    <meta property="og:title" content="Matthews-Kennington Wedding">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://wedding.matthews-kennington.com/assets/img/preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="3945">
+    <meta property="og:image:height" content="2959">
+    <meta property="og:image:alt" content="Kristian & Paul Matthews-Kennington">
+    <meta property="og:description" content="Album of Kristian & Paul Matthews-Kennington's wedding.">
+    <meta property="og:url" content="https://wedding.matthews-kennington.com/album">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Matthews-Kennington Wedding">
+  </head>
+  <body>
+    <div id="album" class="block text-center">
+      <div class="block-foreground w-100">
+        <div class="container-fluid">
+          <div id="album-row" class="row justify-content-around align-items-center g-4 mb-3"></div>
+        </div>
+      </div>
+      <div class="block-background" style="background-image: url('../assets/img/artwork-top.png'); background-repeat: no-repeat; background-position: center top; background-size: 100% auto;"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@epickris/bootstrap-kit@2/dist/js/kit.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const searchParams = new URLSearchParams(window.location.search);
+
+        if (searchParams.has("name")) {
+          const nameSearchParam = searchParams.get("name") || "";
+
+          const nameLabel = document.getElementById("nameLabel");
+
+          nameLabel.textContent = nameSearchParam;
+        }
+
+        fetch('../icloud.json').then(function (res) {
+          return res.json();
+        }).then(function (data) {
+          const albumRow = document.getElementById("album-row");
+
+          for (const photo of data) {
+            const template = document.createElement("template");
+            template.innerHTML = `
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl" data-bs-transition="entrance" style="transform: translateY(1rem);">
+                <picture>
+                  <source srcset="${photo.url}">
+                  <img src="${photo.url}" class="img-thumbnail" alt="${photo.caption}" data-action="zoom">
+                </picture>
+              </div>
+            `.trim();
+
+            albumRow.appendChild(template.content.firstChild);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
